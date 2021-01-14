@@ -1,10 +1,10 @@
 <script>
 	import { onMount } from "svelte"
-	import Placeholder from './Placeholder.svelte';
-	import Meme from "./Meme.svelte"
-	import Stats from "./Stats.svelte"
-	import Heatmaps from "./Heatmaps.svelte"
 	import { Container, Row, Col, Navbar, NavbarBrand } from "sveltestrap"
+	import Heatmaps from "./Heatmaps.svelte"
+	import Meme from "./Meme.svelte"
+	import Placeholder from './Placeholder.svelte';
+	import Stats from "./Stats.svelte"
 	let url = './spinner.svg', stats = {}, heatmaps = {}, loading = true
 
   	onMount(async () => {
