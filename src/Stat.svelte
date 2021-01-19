@@ -43,7 +43,7 @@
     <Card class="text-white bg-{statColor(percentage)}">
         <div class="card-header">{header(period)}</div>
         <div class="card-body">
-            <h4 class="card-title percentage-header">{percentage}%</h4>
+            <h4 class="card-title text-center percentage-header">{percentage}%</h4>
           <p class="text-right card-text">{success} exports out of {total}</p>
         </div>
     </Card>
@@ -51,7 +51,7 @@
 
 <style>
     .percentage-header {
-        font-size: 300%;
+        font-size: 400%;
         font-weight: bold;
     }
 </style>
