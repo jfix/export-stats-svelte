@@ -1,6 +1,6 @@
 <script>
     import { onDestroy, onMount } from 'svelte';
-    import SvelteHeatmap from 'svelte-heatmap'
+    import SvelteHeatmap from '@jfix/svelte-heatmap'
 
     export let data
     let heatmap, startDate, endDate, target
@@ -12,7 +12,8 @@
     $: {
         data && (
             startDate = data[0].date, 
-            endDate = data[data.length - 1].date
+            // don't trust the data, because it is not complete for the current year
+            endDate = new Date((new Date(startDate)).getFullYear(), 11, 31)
         )
         data && target && (
             heatmap = new SvelteHeatmap({
@@ -28,7 +29,8 @@
                     monthLabels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
                     colors: ['#e74c3c', '#00bc8c'],
                     startDate,
-                    endDate
+                    endDate,
+                    monthLayout: '3x4',
                 },
                 target
             })

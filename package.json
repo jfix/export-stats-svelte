@@ -1,6 +1,10 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfix/export-stats-svelte.git"
+  },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -17,9 +21,10 @@
     "svelte": "^3.31.2"
   },
   "dependencies": {
+    "@jfix/svelte-heatmap": "file:../svelte-heatmap",
     "placeholder-loading": "^0.2.6",
     "sirv-cli": "^1.0.0",
-    "svelte-heatmap": "^1.0.2",
     "sveltestrap": "^3.11.0"
-  }
+  },
+  "license": "MIT"
 }
